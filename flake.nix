@@ -25,7 +25,7 @@
           scikit-learn
         ];
 
-        pythonEnv = pkgs.python311.withPackages pythonPackages;
+        pythonEnv = pkgs.python312.withPackages pythonPackages;
       in {
         devShell = pkgs.mkShell {
           buildInputs = [
@@ -37,8 +37,7 @@
             python --version
             jupyter --version
             
-            # Optional: Start Jupyter if desired
-            # jupyter notebook
+            jupyter notebook
           '';
         };
       }
